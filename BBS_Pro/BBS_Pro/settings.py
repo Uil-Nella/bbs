@@ -41,8 +41,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app01',
-    #'django.contrib.comments',
-    'django_comments',
+    'django.contrib.comments',
+    #'django_comments',
     'django.contrib.sites',
     
 )
@@ -52,10 +52,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'BBS_Pro.urls'
@@ -119,7 +117,7 @@ STATIC_URL = '/statics/'
 
 TEMPLATE_DIRS=(
                os.path.join(BASE_DIR,'templates'),
-                
+                 
                )
 STATICFILES_DIRS=(
                 os.path.join(BASE_DIR,'statics'),
