@@ -86,10 +86,10 @@ WSGI_APPLICATION = 'BBS_Pro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bbs',
+        'NAME': 'django',
         'USER':'root',
-        'PASSWORD':'LIUxinyu0718',
-        'HOST':'121.42.24.106',
+        'PASSWORD':'root',
+        'HOST':'127.0.0.1',
         'PORT':'3306',
         
     }
