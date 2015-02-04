@@ -1,9 +1,10 @@
 #coding=utf-8
+
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
 
-#���ӱ�
+#论坛实体
 class BBS(models.Model):
     title = models.CharField(max_length=64)
     summary = models.CharField(max_length=256,blank=True,null=True)
@@ -19,12 +20,12 @@ class BBS(models.Model):
     
 #class Comment(models.Model):
     
-#����
+#分类实体
 class Category(models.Model):
     name = models.CharField(max_length=32,unique=True)
     administrator = models.ForeignKey('BBS_user')
     
-#�û���
+#用户实体
 class BBS_user(models.Model):
     user = models.OneToOneField(User)
     signature = models.CharField(max_length=128,default='This guy too lazy to levave anything here')
